@@ -9,8 +9,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
+        /** Gold-CTA: explizite Hover-Farben, damit `<a>` nicht von `[a]:hover:bg-primary` überschrieben wird */
+        gold:
+          "border-0 bg-gold-500 text-navy-900 shadow-sm hover:bg-gold-400 hover:text-navy-900 active:bg-gold-600 active:text-navy-900 focus-visible:ring-2 focus-visible:ring-gold-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+        /** Helle Outline-Buttons auf dunklem Grund (Kontrast bei Hover) */
+        outlineOnDark:
+          "border border-white/80 bg-transparent text-white hover:bg-white/10 hover:text-white active:bg-white/15 focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
@@ -49,7 +55,7 @@ function Button({
   return (
     <ButtonPrimitive
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size }), className)}
       {...props}
     />
   )
