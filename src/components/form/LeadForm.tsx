@@ -226,10 +226,10 @@ export function LeadForm() {
   return (
     <div className="p-6 sm:p-8">
       <div className="mb-5 flex flex-wrap gap-2">
-        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+        <span className="rounded-full bg-navy-100 px-3 py-1 text-xs font-medium text-navy-800">
           Kostenlos
         </span>
-        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+        <span className="rounded-full bg-navy-100 px-3 py-1 text-xs font-medium text-navy-800">
           Unverbindlich
         </span>
         <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
@@ -240,10 +240,10 @@ export function LeadForm() {
         <h2 className="text-xl font-bold tracking-tight text-navy-900 md:text-2xl">
           Ihre kostenlose Erstberatung
         </h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-navy-600/90">
           In etwa 2 Minuten – wir melden uns persönlich bei Ihnen.
         </p>
-        <p className="mt-2 text-xs leading-relaxed text-slate-500">
+        <p className="mt-2 text-xs leading-relaxed text-navy-600/85">
           Kein Kaltakquise-Druck: Sie erhalten eine ehrliche Einschätzung, ob und
           wie wir Sie unterstützen können.
         </p>
@@ -255,8 +255,8 @@ export function LeadForm() {
         {stepLabel}. {srStepTitle}
       </p>
 
-      <p className="mb-5 flex items-start gap-2 text-xs text-slate-500 sm:items-center">
-        <Shield className="mt-0.5 size-3.5 shrink-0 text-gold-600 sm:mt-0" aria-hidden />
+      <p className="mb-5 flex items-start gap-2 text-xs text-navy-600/90 sm:items-center">
+        <Shield className="mt-0.5 size-3.5 shrink-0 text-navy-600 sm:mt-0" aria-hidden />
         <span>Daten nur für Ihre Anfrage, DSGVO-konform verarbeitet.</span>
       </p>
 
@@ -277,9 +277,9 @@ export function LeadForm() {
       </div>
 
       {showNavButtons && (
-        <div className="mt-8 flex flex-col gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 border-t border-navy-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
           {(step > 0 && isWp && step < 8) || (step === 1 && isPv) ? (
-            <p className="order-2 text-center text-[11px] leading-snug text-slate-400 sm:order-1 sm:max-w-[14rem] sm:text-left">
+            <p className="order-2 text-center text-[11px] leading-snug text-navy-500 sm:order-1 sm:max-w-[14rem] sm:text-left">
               {step > 0 && isWp && step < 8
                 ? "Eine Auswahl reicht – der nächste Schritt öffnet sich automatisch."
                 : "Mehrfachauswahl möglich, danach auf „Weiter“ tippen."}
@@ -293,7 +293,7 @@ export function LeadForm() {
               variant="outline"
               onClick={handleBack}
               disabled={step === 0}
-              className="h-11 min-w-[100px] gap-1 border-slate-200 px-4"
+              className="h-11 min-w-[100px] gap-1 border-navy-200 px-4 text-navy-900 hover:bg-navy-50"
               aria-label="Zum vorherigen Schritt"
             >
               <ChevronLeft className="size-4" aria-hidden />

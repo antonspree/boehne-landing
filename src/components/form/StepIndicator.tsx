@@ -19,15 +19,15 @@ export function StepIndicator({
 
   return (
     <div className={cn("w-full", className)}>
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-navy-100">
         <motion.div
-          className="h-full rounded-full bg-gold-500"
+          className="h-full rounded-full bg-navy-600"
           initial={false}
           animate={{ width: `${pct}%` }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
       </div>
-      <p className="mt-2 text-right text-xs text-slate-500">{label}</p>
+      <p className="mt-2 text-right text-xs text-navy-600">{label}</p>
     </div>
   );
 }

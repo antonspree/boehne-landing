@@ -8,23 +8,23 @@ export function SonnenenergieSection() {
   return (
     <motion.section
       id="sonne"
-      className="bg-slate-50 py-24 md:py-32"
+      className="bg-navy-50 py-24 md:py-32"
       {...fadeInUp}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 lg:order-1">
-            <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+            <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
               Photovoltaik &amp; Speicher
             </p>
-            <blockquote className="mt-4 border-l-4 border-gold-400 pl-5 text-lg font-medium italic leading-snug text-navy-900 md:text-xl">
+            <blockquote className="mt-4 border-l-4 border-navy-600 pl-5 text-lg font-medium italic leading-snug text-navy-900 md:text-xl">
               „Die Sonne stellt uns keine Rechnung!“
             </blockquote>
             <h2 className="mt-6 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
               Entdecken Sie die Kraft der Sonne – für Ihr Zuhause und Ihr
               Budget.
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 text-navy-800/90 leading-relaxed">
               Die Sonne liefert täglich mehr Energie, als wir weltweit
               verbrauchen. Photovoltaik wandelt dieses Licht in sauberen Strom
               um – ohne Emissionen, ohne Brennstoffe. Für Haushalte und
@@ -32,7 +32,7 @@ export function SonnenenergieSection() {
               weniger Abhängigkeit von steigenden Strompreisen und ein
               spürbarer Beitrag zum Klimaschutz.
             </p>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 text-navy-800/90 leading-relaxed">
               Moderne Module und Speicher werden immer effizienter – die
               Investition in eine durchdachte Anlage zahlt sich über die
               Nutzungsdauer immer wieder aus. Wir zeigen Ihnen transparent, was

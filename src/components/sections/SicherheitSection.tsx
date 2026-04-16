@@ -38,7 +38,7 @@ export function SicherheitSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 shadow-md ring-1 ring-slate-200/80">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-100 shadow-md ring-1 ring-navy-200/80">
               <Image
                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80"
                 alt="Beratungsgespräch zu Hause"
@@ -50,14 +50,14 @@ export function SicherheitSection() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+            <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
               Ihre Sicherheit
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
               Eine Investition in Energie soll sich gut anfühlen – auch
               rechtlich und finanziell.
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 text-navy-800/90 leading-relaxed">
               Wir wissen, dass eine PV-Anlage, eine Wärmepumpe oder ein Speicher
               Entscheidungen fürs Leben sind. Deshalb legen wir Wert auf klare
               Kommunikation und fair gestaltete Abläufe – ähnlich den
@@ -77,14 +77,14 @@ export function SicherheitSection() {
                   variants={staggerItem}
                   className="flex gap-4"
                 >
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-gold-50 text-gold-600">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-navy-100 text-navy-700">
                     <p.icon className="size-5" aria-hidden />
                   </span>
                   <span>
                     <span className="font-semibold text-navy-900">
                       {p.title}
                     </span>
-                    <span className="mt-1 block text-sm leading-relaxed text-slate-600">
+                    <span className="mt-1 block text-sm leading-relaxed text-navy-800/85">
                       {p.text}
                     </span>
                   </span>

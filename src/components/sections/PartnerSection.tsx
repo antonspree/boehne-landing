@@ -9,11 +9,11 @@ export function PartnerSection() {
   return (
     <motion.section
       id="partner"
-      className="bg-slate-50 py-20 md:py-24"
+      className="border-y border-navy-100 bg-navy-50 py-20 md:py-24"
       {...fadeInUp}
     >
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-        <h3 className="text-lg font-semibold text-slate-400">
+        <h3 className="text-lg font-semibold text-navy-600">
           Unsere Partner &amp; Hersteller
         </h3>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -22,16 +22,16 @@ export function PartnerSection() {
               key={name}
               className="grayscale transition-all duration-200 hover:grayscale-0"
             >
-              <span className="inline-block rounded-lg border border-slate-200 bg-white px-6 py-3 text-lg font-bold text-navy-700 shadow-sm">
+              <span className="inline-block rounded-lg border border-navy-200 bg-white px-6 py-3 text-lg font-bold text-navy-700 shadow-sm">
                 {name}
               </span>
             </div>
           ))}
         </div>
-        <p className="mt-10 max-w-2xl mx-auto text-sm text-slate-500 leading-relaxed">
+        <p className="mt-10 max-w-2xl mx-auto text-sm text-navy-700/85 leading-relaxed">
           Wir arbeiten ausschließlich mit zertifizierten Qualitätsherstellern.
           Für Finanzierungen kooperieren wir mit der{" "}
-          <strong className="font-medium text-slate-600">LBS Minden</strong> –
+          <strong className="font-medium text-navy-800">LBS Minden</strong> –
           damit Solar &amp; Speicher auch ohne großes Eigenkapital planbar werden.
         </p>
       </div>

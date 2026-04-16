@@ -17,7 +17,7 @@ export function GewerbeSection() {
   return (
     <motion.section
       id="gewerbe"
-      className="bg-slate-50 py-24 md:py-32"
+      className="bg-navy-50 py-24 md:py-32"
       {...fadeInUp}
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
@@ -38,13 +38,13 @@ export function GewerbeSection() {
         </div>
 
         <div>
-          <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+          <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
             Für Unternehmen
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
             Große Anlagen. Individuelle Konzepte. Langfristige Partnerschaft.
           </h2>
-          <p className="mt-4 text-slate-600 leading-relaxed">
+          <p className="mt-4 text-navy-800/90 leading-relaxed">
             Ob mittelständisches Unternehmen, Logistikzentrum oder
             Produktionsstätte – wir planen und realisieren gewerbliche
             Energieprojekte, die sich rechnen. Mit eigenen Monteuren,
@@ -52,7 +52,7 @@ export function GewerbeSection() {
           </p>
           <ul className="mt-8 space-y-3">
             {bullets.map((b) => (
-              <li key={b} className="flex gap-3 text-slate-700">
+              <li key={b} className="flex gap-3 text-navy-800">
                 <CheckCircle2
                   className="mt-0.5 size-5 shrink-0 text-gold-500"
                   aria-hidden

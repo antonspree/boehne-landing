@@ -93,7 +93,7 @@ export function WarumWirSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+          <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
             Warum SunEnergy
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
@@ -112,24 +112,24 @@ export function WarumWirSection() {
             <motion.article
               key={u.title}
               variants={staggerItem}
-              className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
+              className="rounded-2xl border border-navy-100 bg-white p-6 shadow-sm transition-shadow duration-200 hover:border-navy-200 hover:shadow-md"
             >
-              <u.icon className="size-8 text-gold-500" aria-hidden />
+              <u.icon className="size-8 text-navy-600" aria-hidden />
               <h3 className="mt-4 text-lg font-semibold text-navy-900">
                 {u.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <p className="mt-2 text-sm leading-relaxed text-navy-800/85">
                 {u.text}
               </p>
             </motion.article>
           ))}
         </motion.div>
 
-        <div className="mt-16 rounded-2xl bg-slate-50 p-8 md:p-10">
-          <p className="text-center text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+        <div className="mt-16 rounded-2xl border border-navy-100 bg-navy-50 p-8 md:p-10">
+          <p className="text-center text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
             Vertrauen aus der Region
           </p>
-          <p className="mb-8 mt-2 text-center text-sm text-slate-600">
+          <p className="mb-8 mt-2 text-center text-sm text-navy-800/85">
             So erleben Hausbesitzer unsere Beratung – authentisch und ohne
             Auftragspflicht.
           </p>
@@ -137,17 +137,17 @@ export function WarumWirSection() {
             {testimonials.map((t) => (
               <Card
                 key={t.name}
-                className="border-slate-100 bg-white shadow-sm"
+                className="border-navy-100 bg-white shadow-sm"
               >
                 <CardContent className="pt-6">
                   <Stars />
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  <p className="mt-3 text-sm leading-relaxed text-navy-800/90">
                     &ldquo;{t.text}&rdquo;
                   </p>
                   <p className="mt-4 text-sm font-semibold text-navy-900">
                     {t.name}
                   </p>
-                  <p className="text-xs text-slate-500">{t.ort}</p>
+                  <p className="text-xs text-navy-600/80">{t.ort}</p>
                 </CardContent>
               </Card>
             ))}

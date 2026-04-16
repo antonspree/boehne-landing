@@ -20,7 +20,7 @@ export default function DankePage() {
       <h1 className="mt-8 text-3xl font-bold text-navy-900 md:text-4xl">
         Vielen Dank für Ihre Anfrage!
       </h1>
-      <p className="mt-6 max-w-lg text-slate-600 leading-relaxed">
+      <p className="mt-6 max-w-lg text-navy-800/90 leading-relaxed">
         Wir melden uns in der Regel innerhalb von 24 Stunden bei Ihnen. Bitte
         halten Sie Ihr Telefon bereit, da wir häufig telefonisch Kontakt
         aufnehmen.
@@ -29,7 +29,7 @@ export default function DankePage() {
         href="/"
         className={cn(
           buttonVariants({ variant: "outline", size: "lg" }),
-          "mt-10 border-navy-200 text-navy-900 hover:bg-slate-50",
+          "mt-10 border-navy-200 text-navy-900 hover:bg-navy-50",
         )}
         aria-label="Zurück zur Startseite"
       >

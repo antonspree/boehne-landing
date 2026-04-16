@@ -72,7 +72,7 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 w-full transition-[background-color,border-color,box-shadow,backdrop-filter] duration-200",
         solid
-          ? "border-b border-slate-100/80 bg-white/95 shadow-sm backdrop-blur-md"
+          ? "border-b border-navy-200/70 bg-white/95 shadow-sm shadow-navy-900/5 backdrop-blur-md"
           : "bg-transparent",
       )}
     >

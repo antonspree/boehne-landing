@@ -62,7 +62,7 @@ export function FAQSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+            <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
               Häufige Fragen
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
@@ -73,10 +73,10 @@ export function FAQSection() {
             <Accordion multiple={false} className="w-full">
               {faqs.map((item, i) => (
                 <AccordionItem key={item.q} value={`item-${i}`}>
-                  <AccordionTrigger className="text-left text-base font-semibold text-navy-900 hover:text-gold-600">
+                  <AccordionTrigger className="text-left text-base font-semibold text-navy-900 hover:text-navy-600">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed text-slate-600">
+                  <AccordionContent className="text-sm leading-relaxed text-navy-800/90">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>

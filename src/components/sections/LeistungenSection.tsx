@@ -42,13 +42,13 @@ export function LeistungenSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+          <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
             Unsere Leistungen
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
             Alles aus einer Hand – von der Beratung bis zur Montage.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-navy-800/85">
             Von der ersten Bestandsaufnahme bis zur Inbetriebnahme – ein
             Ansprechpartner, ein Team, eine Verantwortung. Nutzen Sie den
             Kurz-Check oben für Ihr konkretes Vorhaben.
@@ -66,7 +66,7 @@ export function LeistungenSection() {
             <motion.article
               key={item.title}
               variants={staggerItem}
-              className="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-shadow duration-200 hover:shadow-lg"
+              className="group overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-sm transition-shadow duration-200 hover:border-navy-200 hover:shadow-lg"
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.2 }}
             >
@@ -84,7 +84,7 @@ export function LeistungenSection() {
                 <h3 className="text-lg font-semibold text-navy-900">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-navy-800/85">
                   {item.text}
                 </p>
                 <Link

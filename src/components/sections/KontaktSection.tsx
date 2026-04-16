@@ -12,12 +12,12 @@ export function KontaktSection() {
   return (
     <motion.section
       id="kontakt"
-      className="border-t border-slate-100 bg-slate-50 py-24 md:py-32"
+      className="border-t border-navy-100 bg-navy-50 py-24 md:py-32"
       {...fadeInUp}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="relative min-h-[280px] overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/80 lg:min-h-[360px]">
+          <div className="relative min-h-[280px] overflow-hidden rounded-2xl shadow-md ring-1 ring-navy-200/80 lg:min-h-[360px]">
             <Image
               src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&q=80"
               alt="Regionale Nähe – Karte als Symbolik"
@@ -38,13 +38,13 @@ export function KontaktSection() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+            <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
               Kontakt
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
               Sprechen Sie mit uns – oder starten Sie den Kurz-Check.
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 text-navy-800/90 leading-relaxed">
               Unser Team in Minden ist für Sie erreichbar. Für eine erste
               technische und wirtschaftliche Einordnung können Sie auch direkt
               das Formular oben auf der Seite nutzen – unverbindlich und
@@ -54,7 +54,7 @@ export function KontaktSection() {
             <ul className="mt-8 space-y-4 text-sm text-navy-900">
               <li className="flex gap-3">
                 <MapPin
-                  className="mt-0.5 size-5 shrink-0 text-gold-600"
+                  className="mt-0.5 size-5 shrink-0 text-navy-600"
                   aria-hidden
                 />
                 <span>
@@ -67,7 +67,7 @@ export function KontaktSection() {
               </li>
               <li className="flex gap-3">
                 <Phone
-                  className="mt-0.5 size-5 shrink-0 text-gold-600"
+                  className="mt-0.5 size-5 shrink-0 text-navy-600"
                   aria-hidden
                 />
                 <a
@@ -79,7 +79,7 @@ export function KontaktSection() {
               </li>
               <li className="flex gap-3">
                 <Mail
-                  className="mt-0.5 size-5 shrink-0 text-gold-600"
+                  className="mt-0.5 size-5 shrink-0 text-navy-600"
                   aria-hidden
                 />
                 <a
@@ -91,7 +91,7 @@ export function KontaktSection() {
               </li>
               <li className="flex gap-3">
                 <Clock
-                  className="mt-0.5 size-5 shrink-0 text-gold-600"
+                  className="mt-0.5 size-5 shrink-0 text-navy-600"
                   aria-hidden
                 />
                 <span>

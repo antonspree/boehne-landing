@@ -10,11 +10,16 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* CI-Blau (an Logo-Wortmarke angelehnt); helle Stufen für Flächen */
   --color-navy-950: #060e1a;
   --color-navy-900: #0a1628;
   --color-navy-800: #0e2040;
   --color-navy-700: #162d55;
   --color-navy-600: #1e3a6e;
+  --color-navy-500: #2a4a8a;
+  --color-navy-400: #3d62b3;
+  --color-navy-100: #e4eaf5;
+  --color-navy-50: #f2f5fb;
   --color-gold-300: #ffd166;
   --color-gold-400: #ffb92a;
   --color-gold-500: #f0a500;

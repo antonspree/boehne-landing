@@ -211,7 +211,7 @@ export function StepFinal_Kontakt({
         </div>
       </div>
 
-      <div className="flex items-start gap-3 rounded-lg border border-slate-100 bg-slate-50/80 p-3">
+      <div className="flex items-start gap-3 rounded-lg border border-navy-100 bg-navy-50/90 p-3">
         <Checkbox
           id="lead-dsgvo"
           checked={datenschutz}

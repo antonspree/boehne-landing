@@ -31,13 +31,13 @@ export function FoerderungenSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
+          <p className="text-xs font-medium uppercase tracking-[0.08em] text-navy-700">
             Förderungen &amp; Rahmenbedingungen
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-[-0.02em] text-navy-900 md:text-4xl">
             Was Politik und Finanzierung für Sie hergeben können.
           </h2>
-          <p className="mt-4 text-slate-600 leading-relaxed">
+          <p className="mt-4 text-navy-800/85 leading-relaxed">
             Gesetzliche Regelungen ändern sich – deshalb ist die persönliche
             Einordnung wichtig. Hier die Themen, die wir in der Beratung für
             Sie prüfen (ohne Steuer- oder Rechtsberatung im engeren Sinne).
@@ -55,15 +55,15 @@ export function FoerderungenSection() {
             <motion.article
               key={c.title}
               variants={staggerItem}
-              className="flex flex-col rounded-2xl border border-slate-100 bg-slate-50/80 p-6 shadow-sm"
+              className="flex flex-col rounded-2xl border border-navy-100 bg-navy-50/90 p-6 shadow-sm"
             >
-              <div className="flex size-11 items-center justify-center rounded-xl bg-gold-100 text-gold-700">
+              <div className="flex size-11 items-center justify-center rounded-xl bg-navy-100 text-navy-700">
                 <c.icon className="size-5" aria-hidden />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-navy-900">
                 {c.title}
               </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-800/90">
                 {c.text}
               </p>
             </motion.article>

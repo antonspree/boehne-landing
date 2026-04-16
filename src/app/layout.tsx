@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans text-slate-900">
+      <body className="min-h-full flex flex-col bg-navy-50/40 font-sans text-navy-900">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

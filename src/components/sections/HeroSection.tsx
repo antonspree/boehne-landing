@@ -14,13 +14,14 @@ const benefits = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-20 md:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-navy-50 via-white to-navy-50/80 py-20 md:py-28 lg:py-32">
+      <div className="pointer-events-none absolute inset-0 z-0 bg-navy-900/[0.03]" />
       <div className="pointer-events-none absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80"
           alt=""
           fill
-          className="object-cover opacity-[0.08]"
+          className="object-cover opacity-[0.06]"
           sizes="100vw"
           priority
         />
@@ -28,10 +29,13 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-[3fr_2fr] lg:gap-16 lg:px-8">
         <motion.div {...heroContent} className="max-w-xl lg:max-w-none">
-          <p className="mb-5 inline-flex items-center rounded-full border border-gold-400 bg-gold-50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
-            ✦ Regionaler Fachbetrieb · Minden &amp; NRW
+          <p className="mb-5 inline-flex items-center rounded-full border border-navy-200 bg-white/90 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-navy-800 shadow-sm">
+            <span className="mr-1.5 text-gold-500" aria-hidden>
+              ✦
+            </span>
+            Regionaler Fachbetrieb · Minden &amp; NRW
           </p>
-          <p className="mb-4 text-sm italic text-slate-500 md:text-base">
+          <p className="mb-4 text-sm italic text-navy-600/80 md:text-base">
             „Die Sonne stellt uns keine Rechnung.“ – Senken Sie Stromkosten und
             leisten Sie einen Beitrag zum Klimaschutz.
           </p>
@@ -40,7 +44,7 @@ export function HeroSection() {
             <span className="text-gold-500">Ihre Sanierung</span>, professionell
             geplant und umgesetzt.
           </h1>
-          <p className="mt-6 text-[1.05rem] leading-relaxed text-slate-600 md:text-[1.1rem]">
+          <p className="mt-6 text-[1.05rem] leading-relaxed text-navy-800/90 md:text-[1.1rem]">
             Ob PV, Wärmepumpe oder Speicher: Wir beraten Sie ehrlich, was sich für
             Ihr Gebäude rechnet – mit eigenen Monteuren, ohne versteckte Kosten
             und ohne Standardpakete von der Stange.
@@ -52,7 +56,7 @@ export function HeroSection() {
                 key={line}
                 className="flex items-start gap-2.5 text-sm font-medium text-navy-800 md:text-[0.95rem]"
               >
-                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700">
+                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-navy-100 text-gold-600">
                   <Check className="size-3" strokeWidth={3} aria-hidden />
                 </span>
                 {line}
@@ -60,7 +64,7 @@ export function HeroSection() {
             ))}
           </ul>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-slate-200/80 pt-8 text-sm text-slate-700">
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-navy-200/80 pt-8 text-sm text-navy-800">
             <span className="flex items-center gap-2">
               <span aria-hidden>⭐</span>
               <span>
@@ -68,12 +72,12 @@ export function HeroSection() {
                 Bewertungen
               </span>
             </span>
-            <span className="hidden h-4 w-px bg-slate-200 sm:block" aria-hidden />
+            <span className="hidden h-4 w-px bg-navy-200 sm:block" aria-hidden />
             <span className="flex items-center gap-2">
               <span aria-hidden>🏦</span>
               Finanzierung über LBS möglich
             </span>
-            <span className="hidden h-4 w-px bg-slate-200 sm:block" aria-hidden />
+            <span className="hidden h-4 w-px bg-navy-200 sm:block" aria-hidden />
             <span className="flex items-center gap-2">
               <span aria-hidden>📍</span>
               Vor Ort in NRW
@@ -91,7 +95,7 @@ export function HeroSection() {
         </motion.div>
 
         <div className="lg:sticky lg:top-24" id="beratung">
-          <div className="relative rounded-2xl border border-slate-100/80 bg-white p-[1px] shadow-[0_25px_60px_-12px_rgba(10,22,40,0.18)] ring-1 ring-gold-500/20">
+          <div className="relative rounded-2xl border border-navy-100 bg-white p-[1px] shadow-[0_25px_60px_-12px_rgba(10,22,40,0.2)] ring-1 ring-navy-900/10">
             <div className="overflow-hidden rounded-2xl bg-white">
               <LeadForm />
             </div>
