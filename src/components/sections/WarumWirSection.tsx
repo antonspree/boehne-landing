@@ -35,7 +35,7 @@ const usps = [
   {
     icon: Award,
     title: "Starke Herstellerpartner",
-    text: "Wir setzen ausschließlich auf bewährte Hersteller wie E3/DC, die für Qualität und Langlebigkeit stehen.",
+    text: "Wir setzen auf bewährte Marken wie e3DC, SMA, BYD, Sungrow, QCells und Trina Solar – für Qualität und Langlebigkeit.",
   },
 ];
 
