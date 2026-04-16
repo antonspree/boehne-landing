@@ -4,9 +4,8 @@ import { ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
 import { fadeInUp } from "@/lib/motion";
+import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-
-const phoneHref = "tel:+492xxxxxxxx";
 
 export function ConversionMidSection() {
   return (
@@ -44,7 +43,7 @@ export function ConversionMidSection() {
             <ArrowRight className="size-4" aria-hidden />
           </a>
           <a
-            href={phoneHref}
+            href={site.phoneHref}
             className={cn(
               buttonVariants({ variant: "outlineOnDark", size: "lg" }),
               "inline-flex h-12 items-center justify-center gap-2 border-white/30",

@@ -28,8 +28,11 @@ export function PartnerSection() {
             </div>
           ))}
         </div>
-        <p className="mt-10 text-sm text-slate-500">
+        <p className="mt-10 max-w-2xl mx-auto text-sm text-slate-500 leading-relaxed">
           Wir arbeiten ausschließlich mit zertifizierten Qualitätsherstellern.
+          Für Finanzierungen kooperieren wir mit der{" "}
+          <strong className="font-medium text-slate-600">LBS Minden</strong> –
+          damit Solar &amp; Speicher auch ohne großes Eigenkapital planbar werden.
         </p>
       </div>
     </motion.section>

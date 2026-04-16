@@ -15,6 +15,18 @@ const faqs = [
     a: "Die Einspeisevergütung ist gesunken, aber die Eigenverbrauchsoptimierung und gestiegene Strompreise machen PV heute attraktiver denn je. Wer jetzt investiert, sichert sich stabile Energiekosten für die nächsten 25+ Jahre.",
   },
   {
+    q: "Was passiert, wenn ich kein Eigenkapital habe?",
+    a: "Über unsere Zusammenarbeit mit der LBS Minden können wir attraktive Finanzierungsmodelle anbieten – Solarstromanlagen finanzieren, ohne das Ersparte anzutasten. Im Erstgespräch rechnen wir Ihnen Beispiele durch.",
+  },
+  {
+    q: "Bin ich durch das Ausfüllen des Formulars verpflichtet?",
+    a: "Nein. Das Formular dient der Ersteinschätzung. Sie gehen erst mit Auftragserteilung ins Geschäft – und auch dann gelten gesetzliche Widerrufsrechte, die wir transparent erklären.",
+  },
+  {
+    q: "Können Mieter eine Photovoltaikanlage installieren?",
+    a: "Ja, mit Zustimmung der Eigentümerschaft ist das möglich. Wir begleiten Sie bei der Abstimmung und stellen die nötigen Unterlagen bereit.",
+  },
+  {
     q: "Was bringt ein dynamischer Stromtarif?",
     a: "In Kombination mit einem Speicher können Sie Strom dann kaufen, wenn er an der Börse günstig ist – oft nachts oder bei viel Wind. Das senkt Ihre Stromkosten zusätzlich um 15–30%.",
   },
@@ -32,7 +44,11 @@ const faqs = [
   },
   {
     q: "Welche Förderungen gibt es?",
-    a: "Wärmepumpen werden aktuell mit bis zu 70% über die BEG (Bundesförderung Effizienzgebäude) gefördert. Bei PV gibt es attraktive KfW-Kredite. Wir beraten Sie in der Erstberatung kostenlos über alle aktuellen Optionen.",
+    a: "Wärmepumpen werden aktuell mit bis zu 70 % über die BEG (Bundesförderung Effizienzgebäude) gefördert. Bei PV gibt es attraktive KfW-Kredite. Wir beraten Sie in der Erstberatung kostenlos über alle aktuellen Optionen.",
+  },
+  {
+    q: "Unterliegen Anlagenpreise Marktschwankungen?",
+    a: "Rohstoffe, Zölle und Wechselkurse können Einkaufspreise beeinflussen – deshalb ist eine verbindliche Planung mit aktuellem Angebot wichtig. Wir informieren Sie ehrlich über Lieferzeiten und Preisbestandteile.",
   },
 ];
 

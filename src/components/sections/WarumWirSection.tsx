@@ -42,18 +42,33 @@ const usps = [
 const testimonials = [
   {
     name: "Thomas K.",
-    ort: "Köln",
+    ort: "Minden",
     text: "Von der Beratung bis zur Montage – alles aus einer Hand. Transparent und zuverlässig.",
   },
   {
     name: "Sabine M.",
-    ort: "Düsseldorf",
+    ort: "Bad Oeynhausen",
     text: "Endlich ein Anbieter, der vor Ort war und keine leeren Versprechen gemacht hat.",
   },
   {
     name: "Markus L.",
-    ort: "Dortmund",
+    ort: "Porta Westfalica",
     text: "Unsere PV-Anlage läuft einwandfrei. Das Team war pünktlich und sehr professionell.",
+  },
+  {
+    name: "Nicole R.",
+    ort: "Minden",
+    text: "Von Anfang bis Ende zu 100 % zufrieden – schnelle, saubere Arbeit und bester Service.",
+  },
+  {
+    name: "Hans B.",
+    ort: "Minden",
+    text: "Sehr freundliche und kompetente Beratung – inklusive durchdachter Speicher- und Wallbox-Lösung.",
+  },
+  {
+    name: "BDM Gebäudereinigung",
+    ort: "Gewerbe aus der Region",
+    text: "Professioneller Umgang mit Geschäftspartnern: schnell, unkompliziert und seriös.",
   },
 ];
 
@@ -118,7 +133,7 @@ export function WarumWirSection() {
             So erleben Hausbesitzer unsere Beratung – authentisch und ohne
             Auftragspflicht.
           </p>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t) => (
               <Card
                 key={t.name}

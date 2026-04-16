@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -10,14 +9,16 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { Logo } from "@/components/layout/Logo";
 import { useScrollPosition } from "@/lib/useScrollPosition";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#leistungen", label: "Leistungen" },
+  { href: "#ablauf", label: "Ablauf" },
   { href: "#gewerbe", label: "Gewerbe" },
   { href: "#warum-wir", label: "Über uns" },
-  { href: "#beratung", label: "Kontakt" },
+  { href: "#kontakt", label: "Kontakt" },
 ] as const;
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
@@ -69,31 +70,24 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
+        "sticky top-0 z-50 w-full transition-[background-color,border-color,box-shadow,backdrop-filter] duration-200",
         solid
           ? "border-b border-slate-100/80 bg-white/95 shadow-sm backdrop-blur-md"
           : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight"
-          aria-label="SunEnergy Startseite"
-        >
-          <span className="text-gold-500">Sun</span>
-          <span className="text-navy-900">Energy</span>
-        </Link>
+      <div className="mx-auto flex h-20 max-h-20 w-full max-w-7xl items-center justify-between gap-3 px-4 py-0 sm:gap-5 sm:px-6 md:h-24 md:max-h-24 md:gap-7 lg:gap-8 lg:px-8">
+        <Logo variant="nav" priority />
 
         <nav
-          className="hidden items-center gap-10 md:flex"
+          className="hidden min-w-0 flex-1 items-center justify-end gap-8 lg:gap-10 xl:gap-12 md:flex"
           aria-label="Hauptnavigation"
         >
           <NavLinks />
           <CtaLink />
         </nav>
 
-        <div className="md:hidden">
+        <div className="shrink-0 md:hidden">
           <Button
             type="button"
             variant="ghost"

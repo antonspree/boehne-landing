@@ -220,11 +220,11 @@ export function StepFinal_Kontakt({
           }
           aria-invalid={errors.datenschutz ? "true" : "false"}
           aria-required
-          className="mt-0.5 border-slate-300 data-checked:border-gold-500 data-checked:bg-gold-500"
+          className="mt-0.5 shrink-0 border-slate-300 data-checked:border-gold-500 data-checked:bg-gold-500"
         />
-        <Label
+        <label
           htmlFor="lead-dsgvo"
-          className="cursor-pointer text-xs font-normal leading-snug text-slate-600"
+          className="block min-w-0 flex-1 cursor-pointer text-left text-xs font-normal leading-relaxed text-slate-600"
         >
           Ich habe die{" "}
           <Link
@@ -237,7 +237,7 @@ export function StepFinal_Kontakt({
           </Link>{" "}
           gelesen und stimme der Verarbeitung meiner Daten zu.{" "}
           <span className="text-destructive">*</span>
-        </Label>
+        </label>
       </div>
       {errors.datenschutz && (
         <p className="text-xs text-destructive" role="alert">

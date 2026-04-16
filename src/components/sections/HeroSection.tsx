@@ -29,7 +29,11 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-[3fr_2fr] lg:gap-16 lg:px-8">
         <motion.div {...heroContent} className="max-w-xl lg:max-w-none">
           <p className="mb-5 inline-flex items-center rounded-full border border-gold-400 bg-gold-50 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.08em] text-gold-600">
-            ✦ Regionaler Fachbetrieb · NRW
+            ✦ Regionaler Fachbetrieb · Minden &amp; NRW
+          </p>
+          <p className="mb-4 text-sm italic text-slate-500 md:text-base">
+            „Die Sonne stellt uns keine Rechnung.“ – Senken Sie Stromkosten und
+            leisten Sie einen Beitrag zum Klimaschutz.
           </p>
           <h1 className="text-4xl font-extrabold leading-[1.08] tracking-[-0.03em] text-navy-900 md:text-5xl lg:text-[3.35rem]">
             Weniger Energiekosten, mehr Unabhängigkeit –{" "}
@@ -60,7 +64,7 @@ export function HeroSection() {
             <span className="flex items-center gap-2">
               <span aria-hidden>⭐</span>
               <span>
-                <strong className="text-navy-900">4,9/5</strong> – Google
+                <strong className="text-navy-900">5,0/5</strong> – Google
                 Bewertungen
               </span>
             </span>

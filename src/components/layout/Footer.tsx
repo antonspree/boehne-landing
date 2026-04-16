@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Camera, MessageCircle, Share2 } from "lucide-react";
-
-const phoneDisplay = "+49 (0)2xx xxx xxxx";
-const phoneHref = "tel:+492xxxxxxxx";
+import { Logo } from "@/components/layout/Logo";
+import { site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -10,12 +9,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-xl font-bold">
-              <span className="text-gold-500">Sun</span>
-              <span className="text-white">Energy</span>
-            </p>
+            <Logo variant="footer" className="-ml-0.5" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
-              Regionaler Fachbetrieb für energetische Sanierung in NRW.
+              Photovoltaik, Speicher &amp; Wärmepumpen – regional verwurzelt in
+              Minden, für Kundinnen und Kunden in NRW.
             </p>
             <div className="mt-6 flex gap-4">
               <a
@@ -120,6 +117,14 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href="#kontakt"
+                  className="transition-colors duration-200 hover:text-white"
+                >
+                  Kontakt &amp; Anfahrt
+                </a>
+              </li>
+              <li>
                 <span className="text-slate-500">Karriere</span>
               </li>
             </ul>
@@ -133,35 +138,39 @@ export function Footer() {
               <li className="flex gap-2">
                 <span aria-hidden>📍</span>
                 <span>
-                  Musterstraße 1
+                  {site.addressLines[0]}
                   <br />
-                  44000 Musterstadt, NRW
+                  {site.addressLines[1]}
                 </span>
               </li>
               <li>
                 <a
-                  href={phoneHref}
+                  href={site.phoneHref}
                   className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
                 >
                   <span aria-hidden>📞</span>
-                  {phoneDisplay}
+                  {site.phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@sunenergy.de"
+                  href={site.emailHref}
                   className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
                 >
                   <span aria-hidden>✉</span>
-                  info@sunenergy.de
+                  {site.email}
                 </a>
               </li>
+              <li className="text-slate-500">{site.hoursShort}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-slate-500 sm:flex-row">
-          <p>© 2025 SunEnergy GmbH – Alle Rechte vorbehalten</p>
+          <p>
+            © {new Date().getFullYear()} {site.company} – Alle Rechte
+            vorbehalten
+          </p>
           <div className="flex gap-6">
             <Link
               href="/impressum"

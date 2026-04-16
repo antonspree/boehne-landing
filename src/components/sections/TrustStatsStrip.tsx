@@ -30,19 +30,19 @@ const items = [
 export function TrustStatsStrip() {
   return (
     <motion.section
-      className="border-y border-slate-100 bg-white py-12 md:py-14"
+      className="border-b border-gold-600/40 bg-gold-500 py-12 md:py-14"
       {...fadeInUp}
       aria-label="Warum SunEnergy"
     >
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-10 lg:px-8">
         {items.map((item) => (
           <div key={item.title} className="flex gap-4">
-            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gold-50 text-gold-600">
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-white/20 text-white">
               <item.icon className="size-6" aria-hidden />
             </div>
             <div>
-              <p className="font-semibold text-navy-900">{item.title}</p>
-              <p className="mt-1 text-sm leading-snug text-slate-600">
+              <p className="font-semibold text-white">{item.title}</p>
+              <p className="mt-1 text-sm leading-snug text-white/90">
                 {item.text}
               </p>
             </div>

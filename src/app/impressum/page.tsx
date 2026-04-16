@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Impressum | SunEnergy",
-  description: "Impressum und rechtliche Angaben der SunEnergy GmbH.",
+  title: "Impressum | SUNENERGY Böhne",
+  description: "Impressum und rechtliche Angaben der SUNENERGY Böhne GmbH.",
 };
 
 export default function ImpressumPage() {
@@ -17,11 +18,11 @@ export default function ImpressumPage() {
           Angaben gemäß § 5 TMG
         </h2>
         <p>
-          SunEnergy GmbH
+          {site.company}
           <br />
-          Musterstraße 1
+          {site.addressLines[0]}
           <br />
-          44000 Musterstadt
+          {site.addressLines[1]}
         </p>
 
         <p>
@@ -37,9 +38,12 @@ export default function ImpressumPage() {
 
         <h2 className="mt-8 text-lg font-semibold text-navy-900">Kontakt</h2>
         <p>
-          Telefon: +49 (0)2xx xxx xxxx
+          Telefon: {site.phoneDisplay}
           <br />
-          E-Mail: info@sunenergy.de
+          E-Mail:{" "}
+          <a href={site.emailHref} className="text-gold-600 underline-offset-2 hover:underline">
+            {site.email}
+          </a>
         </p>
 
         <h2 className="mt-8 text-lg font-semibold text-navy-900">

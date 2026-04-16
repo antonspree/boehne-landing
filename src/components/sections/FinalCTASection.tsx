@@ -5,9 +5,8 @@ import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { buttonVariants } from "@/components/ui/button";
 import { fadeInUp } from "@/lib/motion";
+import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-
-const phoneHref = "tel:+492xxxxxxxx";
 
 const reassurance = [
   "Kostenlose und unverbindliche Ersteinschätzung",
@@ -64,7 +63,7 @@ export function FinalCTASection() {
             Jetzt Kurz-Check starten →
           </a>
           <a
-            href={phoneHref}
+            href={site.phoneHref}
             className={cn(
               buttonVariants({ variant: "outlineOnDark", size: "lg" }),
               "h-12 min-w-[260px]",
