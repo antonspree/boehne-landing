@@ -66,9 +66,17 @@ const sections: {
       <p>
         Wenn Sie das Formular nutzen, verarbeiten wir die von Ihnen eingegebenen
         Daten (Name, Kontaktdaten, Angaben zu Ihrem Anliegen) zur Bearbeitung
-        Ihrer Angebotsanfrage und zur Kontaktaufnahme. Die Daten werden
-        vorübergehend in unserem System bzw. bei unserem E-Mail-Dienst
-        verarbeitet. Eine Speicherdauer richtet sich nach den gesetzlichen
+        Ihrer Angebotsanfrage und zur Kontaktaufnahme. Übermittlung per
+        E-Mail an{" "}
+        <a
+          href="mailto:planung@boehne.de"
+          className="text-gold-600 underline underline-offset-2"
+        >
+          planung@boehne.de
+        </a>{" "}
+        (technisch über den Dienstleister Resend, ggf. in den USA; geeignete
+        Garantien nach Art. 46 DSGVO). Die Daten werden vorübergehend in
+        unserem System bzw. bei unserem E-Mail-Dienst verarbeitet. Eine Speicherdauer richtet sich nach den gesetzlichen
         Aufbewahrungsfristen; Anfragedaten werden in der Regel nach Abschluss
         der Anbahnung bzw. nach 24 Monaten gelöscht, sofern keine gesetzlichen
         Pflichten entgegenstehen.

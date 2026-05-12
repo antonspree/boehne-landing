@@ -5,6 +5,8 @@ export const site = {
   phoneHref: "tel:+4957197304050",
   email: "info@boehne.de",
   emailHref: "mailto:info@boehne.de",
+  /** Ziel für Lead-Anfragen aus dem Formular (serverseitig, s. LEAD_EMAIL_TO). */
+  leadsEmail: "planung@boehne.de",
   addressLines: ["Aminghauser Str. 5", "32423 Minden"],
   regionLabel: "Minden & NRW",
   hoursShort: "Mo–Do 8–16:30 · Fr 8–14 Uhr",

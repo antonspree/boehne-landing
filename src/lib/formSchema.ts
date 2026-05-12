@@ -26,3 +26,50 @@ export const contactStepSchema = z.object({
 });
 
 export type ContactStepValues = z.infer<typeof contactStepSchema>;
+
+/** Snapshot der Formularantworten (wie beim Absenden). */
+export const formSnapshotSchema = z.object({
+  interest: z.enum(["photovoltaik", "waermepumpe"]).nullable(),
+  pv_speicher: z.boolean(),
+  pv_ladestation: z.boolean(),
+  pv_dynamisch: z.boolean(),
+  pv_v2h: z.boolean(),
+  wp_heizung: z
+    .enum(["gas", "oel", "fernwaerme", "nachtspeicher", "sonstige"])
+    .nullable(),
+  wp_alter: z.enum(["unter5", "5bis15", "ueber15"]).nullable(),
+  wp_gebaeudetyp: z
+    .enum([
+      "einfamilienhaus",
+      "doppelhaus",
+      "reihenhaus",
+      "mehrfamilienhaus",
+    ])
+    .nullable(),
+  wp_eigentuemer: z.enum(["ja", "nein"]).nullable(),
+  wp_installationsort: z
+    .enum(["innen", "aussen", "beides", "weissnicht"])
+    .nullable(),
+  wp_zeitraum: z
+    .enum(["sofort", "3monate", "6monate", "spaeter"])
+    .nullable(),
+  wp_pv_interesse: z.enum(["ja", "nein", "vielleicht"]).nullable(),
+  name: z.string(),
+  telefon: z.string(),
+  email: z.string(),
+  plz: z.string(),
+  ort: z.string(),
+  strasse: z.string(),
+});
+
+export const leadSubmissionSchema = z
+  .object({
+    contact: contactStepSchema,
+    form: formSnapshotSchema,
+  })
+  .refine((d) => d.form.interest !== null, {
+    message: "Thema fehlt",
+    path: ["form", "interest"],
+  });
+
+export type LeadSubmission = z.infer<typeof leadSubmissionSchema>;

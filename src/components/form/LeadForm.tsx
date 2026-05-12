@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Shield } from "lucide-react";
@@ -62,6 +62,7 @@ export function LeadForm() {
   const [form, setForm] = useState<FormState>(initialFormState);
   const [step, setStep] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const isPv = form.interest === "photovoltaik";
   const isWp = form.interest === "waermepumpe";
@@ -92,6 +93,10 @@ export function LeadForm() {
     setForm((prev) => ({ ...prev, ...patch }));
   }, []);
 
+  useEffect(() => {
+    setSubmitError(null);
+  }, [step]);
+
   const handleNext = useCallback(() => {
     if (!canProceed(step, form)) return;
     setStep((s) => Math.min(s + 1, totalSteps - 1));
@@ -114,21 +119,46 @@ export function LeadForm() {
 
   const handleContactSubmit = useCallback(
     async (data: ContactStepValues) => {
+      setSubmitError(null);
       setSubmitting(true);
-      setForm((prev) => ({
-        ...prev,
+      const snapshot: FormState = {
+        ...form,
         name: data.name,
         telefon: data.telefon,
         email: data.email,
         plz: data.plz,
         ort: data.ort,
         strasse: data.strasse,
-      }));
-      await new Promise((r) => setTimeout(r, 500));
-      router.push("/danke");
-      setSubmitting(false);
+      };
+      try {
+        const res = await fetch("/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contact: data, form: snapshot }),
+        });
+        let message =
+          "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.";
+        try {
+          const json = (await res.json()) as { error?: string };
+          if (json.error) message = json.error;
+        } catch {
+          /* Standardhinweis */
+        }
+        if (!res.ok) {
+          setSubmitting(false);
+          setSubmitError(message);
+          return;
+        }
+        setForm(snapshot);
+        router.push("/danke");
+      } catch {
+        setSubmitting(false);
+        setSubmitError(
+          "Keine Verbindung. Bitte prüfen Sie Ihre Internetverbindung oder rufen Sie uns an.",
+        );
+      }
     },
-    [router],
+    [form, router],
   );
 
   const showNavButtons =
@@ -250,6 +280,15 @@ export function LeadForm() {
       </div>
 
       <StepIndicator progress={progress} label={stepLabel} className="mb-4" />
+
+      {submitError ? (
+        <p
+          className="mb-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm text-red-900"
+          role="alert"
+        >
+          {submitError}
+        </p>
+      ) : null}
 
       <p id="lead-form-step-status" className="sr-only" aria-live="polite">
         {stepLabel}. {srStepTitle}
